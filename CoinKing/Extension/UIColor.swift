@@ -32,7 +32,8 @@ struct ThemeColor {
     static let tint1 = UIColor(hexString: "f8f9fa")
     static let tint2 = UIColor(hexString: "ced4da")
     static let background = UIColor(hexString: "0b132b")
-    static let positive = UIColor(hexString: "147df5")
-    static let negative = UIColor(hexString: "dd2d4a")
+    static let positive = UIColor(hexString: "dd2d4a")
+    static let stable = UIColor(hexString: "bcb8b1")
+    static let negative = UIColor(hexString: "147df5")
     
 }

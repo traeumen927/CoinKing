@@ -20,6 +20,8 @@
 		F10898882B1764DF0021B873 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10898872B1764DF0021B873 /* Coin.swift */; };
 		F108988B2B176BDD0021B873 /* MarketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F108988A2B176BDD0021B873 /* MarketCell.swift */; };
 		F108988D2B1770060021B873 /* MarketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F108988C2B1770060021B873 /* MarketViewModel.swift */; };
+		F10898902B1782410021B873 /* PercentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F108988F2B1782410021B873 /* PercentView.swift */; };
+		F10898922B1784B80021B873 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10898912B1784B80021B873 /* Double.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		F10898872B1764DF0021B873 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		F108988A2B176BDD0021B873 /* MarketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCell.swift; sourceTree = "<group>"; };
 		F108988C2B1770060021B873 /* MarketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewModel.swift; sourceTree = "<group>"; };
+		F108988F2B1782410021B873 /* PercentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentView.swift; sourceTree = "<group>"; };
+		F10898912B1784B80021B873 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 				F10898782B17608D0021B873 /* LifeCycle */,
 				F108987A2B17609E0021B873 /* Extension */,
 				F10898842B1762BD0021B873 /* Service */,
+				F108988E2B1782250021B873 /* CustomView */,
 				F108987B2B1760AF0021B873 /* ViewController */,
 				F108987C2B1760B70021B873 /* ViewModel */,
 				F108987D2B1760C90021B873 /* Model */,
@@ -121,6 +126,7 @@
 				F108987E2B1760E60021B873 /* CALayer.swift */,
 				F108987F2B1760E60021B873 /* UIColor.swift */,
 				F10898802B1760E60021B873 /* UIResponder.swift */,
+				F10898912B1784B80021B873 /* Double.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -163,6 +169,14 @@
 				F108988A2B176BDD0021B873 /* MarketCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		F108988E2B1782250021B873 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				F108988F2B1782410021B873 /* PercentView.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,7 +301,9 @@
 				F10898672B175E100021B873 /* SceneDelegate.swift in Sources */,
 				F108988D2B1770060021B873 /* MarketViewModel.swift in Sources */,
 				F10898832B1760F00021B873 /* UIResponder.swift in Sources */,
+				F10898902B1782410021B873 /* PercentView.swift in Sources */,
 				F10898882B1764DF0021B873 /* Coin.swift in Sources */,
+				F10898922B1784B80021B873 /* Double.swift in Sources */,
 				F10898822B1760EE0021B873 /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
