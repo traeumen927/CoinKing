@@ -18,6 +18,8 @@
 		F10898832B1760F00021B873 /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10898802B1760E60021B873 /* UIResponder.swift */; };
 		F10898862B1763B60021B873 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10898852B1763B60021B873 /* ApiManager.swift */; };
 		F10898882B1764DF0021B873 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10898872B1764DF0021B873 /* Coin.swift */; };
+		F108988B2B176BDD0021B873 /* MarketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F108988A2B176BDD0021B873 /* MarketCell.swift */; };
+		F108988D2B1770060021B873 /* MarketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F108988C2B1770060021B873 /* MarketViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		F10898802B1760E60021B873 /* UIResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponder.swift; sourceTree = "<group>"; };
 		F10898852B1763B60021B873 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		F10898872B1764DF0021B873 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		F108988A2B176BDD0021B873 /* MarketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCell.swift; sourceTree = "<group>"; };
+		F108988C2B1770060021B873 /* MarketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 				F108987B2B1760AF0021B873 /* ViewController */,
 				F108987C2B1760B70021B873 /* ViewModel */,
 				F108987D2B1760C90021B873 /* Model */,
+				F10898892B176BCF0021B873 /* Cell */,
 				F108986D2B175E100021B873 /* Assets.xcassets */,
 				F108986F2B175E100021B873 /* LaunchScreen.storyboard */,
 				F10898722B175E100021B873 /* Info.plist */,
@@ -131,6 +136,7 @@
 		F108987C2B1760B70021B873 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F108988C2B1770060021B873 /* MarketViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -149,6 +155,14 @@
 				F10898852B1763B60021B873 /* ApiManager.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		F10898892B176BCF0021B873 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F108988A2B176BDD0021B873 /* MarketCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,8 +282,10 @@
 				F10898692B175E100021B873 /* MarketViewController.swift in Sources */,
 				F10898812B1760EB0021B873 /* CALayer.swift in Sources */,
 				F10898652B175E100021B873 /* AppDelegate.swift in Sources */,
+				F108988B2B176BDD0021B873 /* MarketCell.swift in Sources */,
 				F10898862B1763B60021B873 /* ApiManager.swift in Sources */,
 				F10898672B175E100021B873 /* SceneDelegate.swift in Sources */,
+				F108988D2B1770060021B873 /* MarketViewModel.swift in Sources */,
 				F10898832B1760F00021B873 /* UIResponder.swift in Sources */,
 				F10898882B1764DF0021B873 /* Coin.swift in Sources */,
 				F10898822B1760EE0021B873 /* UIColor.swift in Sources */,
