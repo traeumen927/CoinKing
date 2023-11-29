@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E0BC10172BC2E4DBCFC5FDE2 /* Pods_CoinKing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC096DFABCDE28ED349DA88C /* Pods_CoinKing.framework */; };
+		F10898652B175E100021B873 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10898642B175E100021B873 /* AppDelegate.swift */; };
+		F10898672B175E100021B873 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10898662B175E100021B873 /* SceneDelegate.swift */; };
+		F10898692B175E100021B873 /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10898682B175E100021B873 /* MarketViewController.swift */; };
+		F108986E2B175E100021B873 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F108986D2B175E100021B873 /* Assets.xcassets */; };
+		F10898712B175E100021B873 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F108986F2B175E100021B873 /* LaunchScreen.storyboard */; };
+		F10898812B1760EB0021B873 /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F108987E2B1760E60021B873 /* CALayer.swift */; };
+		F10898822B1760EE0021B873 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F108987F2B1760E60021B873 /* UIColor.swift */; };
+		F10898832B1760F00021B873 /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10898802B1760E60021B873 /* UIResponder.swift */; };
+		F10898862B1763B60021B873 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10898852B1763B60021B873 /* ApiManager.swift */; };
+		F10898882B1764DF0021B873 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10898872B1764DF0021B873 /* Coin.swift */; };
+		F108988B2B176BDD0021B873 /* MarketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F108988A2B176BDD0021B873 /* MarketCell.swift */; };
+		F108988D2B1770060021B873 /* MarketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F108988C2B1770060021B873 /* MarketViewModel.swift */; };
+		F10898902B1782410021B873 /* PercentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F108988F2B1782410021B873 /* PercentView.swift */; };
+		F10898922B1784B80021B873 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10898912B1784B80021B873 /* Double.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B186429E4553683CD81BCFEF /* Pods-CoinKing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinKing.release.xcconfig"; path = "Target Support Files/Pods-CoinKing/Pods-CoinKing.release.xcconfig"; sourceTree = "<group>"; };
+		BC096DFABCDE28ED349DA88C /* Pods_CoinKing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinKing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C916E62CE913BF163B106E57 /* Pods-CoinKing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinKing.debug.xcconfig"; path = "Target Support Files/Pods-CoinKing/Pods-CoinKing.debug.xcconfig"; sourceTree = "<group>"; };
+		F10898612B175E100021B873 /* CoinKing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinKing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F10898642B175E100021B873 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F10898662B175E100021B873 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F10898682B175E100021B873 /* MarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
+		F108986D2B175E100021B873 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F10898702B175E100021B873 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F10898722B175E100021B873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F108987E2B1760E60021B873 /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
+		F108987F2B1760E60021B873 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		F10898802B1760E60021B873 /* UIResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponder.swift; sourceTree = "<group>"; };
+		F10898852B1763B60021B873 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		F10898872B1764DF0021B873 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		F108988A2B176BDD0021B873 /* MarketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketCell.swift; sourceTree = "<group>"; };
+		F108988C2B1770060021B873 /* MarketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewModel.swift; sourceTree = "<group>"; };
+		F108988F2B1782410021B873 /* PercentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentView.swift; sourceTree = "<group>"; };
+		F10898912B1784B80021B873 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F108985E2B175E100021B873 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0BC10172BC2E4DBCFC5FDE2 /* Pods_CoinKing.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1631C3375B066B43B05D1B2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C916E62CE913BF163B106E57 /* Pods-CoinKing.debug.xcconfig */,
+				B186429E4553683CD81BCFEF /* Pods-CoinKing.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A0EA3E4C666D13FDB1464DF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC096DFABCDE28ED349DA88C /* Pods_CoinKing.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F10898582B175E100021B873 = {
+			isa = PBXGroup;
+			children = (
+				F10898632B175E100021B873 /* CoinKing */,
+				F10898622B175E100021B873 /* Products */,
+				1631C3375B066B43B05D1B2F /* Pods */,
+				A0EA3E4C666D13FDB1464DF8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F10898622B175E100021B873 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F10898612B175E100021B873 /* CoinKing.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F10898632B175E100021B873 /* CoinKing */ = {
+			isa = PBXGroup;
+			children = (
+				F10898782B17608D0021B873 /* LifeCycle */,
+				F108987A2B17609E0021B873 /* Extension */,
+				F10898842B1762BD0021B873 /* Service */,
+				F108988E2B1782250021B873 /* CustomView */,
+				F108987B2B1760AF0021B873 /* ViewController */,
+				F108987C2B1760B70021B873 /* ViewModel */,
+				F108987D2B1760C90021B873 /* Model */,
+				F10898892B176BCF0021B873 /* Cell */,
+				F108986D2B175E100021B873 /* Assets.xcassets */,
+				F108986F2B175E100021B873 /* LaunchScreen.storyboard */,
+				F10898722B175E100021B873 /* Info.plist */,
+			);
+			path = CoinKing;
+			sourceTree = "<group>";
+		};
+		F10898782B17608D0021B873 /* LifeCycle */ = {
+			isa = PBXGroup;
+			children = (
+				F10898642B175E100021B873 /* AppDelegate.swift */,
+				F10898662B175E100021B873 /* SceneDelegate.swift */,
+			);
+			path = LifeCycle;
+			sourceTree = "<group>";
+		};
+		F108987A2B17609E0021B873 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F108987E2B1760E60021B873 /* CALayer.swift */,
+				F108987F2B1760E60021B873 /* UIColor.swift */,
+				F10898802B1760E60021B873 /* UIResponder.swift */,
+				F10898912B1784B80021B873 /* Double.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F108987B2B1760AF0021B873 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F10898682B175E100021B873 /* MarketViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F108987C2B1760B70021B873 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F108988C2B1770060021B873 /* MarketViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F108987D2B1760C90021B873 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F10898872B1764DF0021B873 /* Coin.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F10898842B1762BD0021B873 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F10898852B1763B60021B873 /* ApiManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F10898892B176BCF0021B873 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F108988A2B176BDD0021B873 /* MarketCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F108988E2B1782250021B873 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				F108988F2B1782410021B873 /* PercentView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F10898602B175E100021B873 /* CoinKing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F10898752B175E100021B873 /* Build configuration list for PBXNativeTarget "CoinKing" */;
+			buildPhases = (
+				77557A2146B640AD0316DB83 /* [CP] Check Pods Manifest.lock */,
+				F108985D2B175E100021B873 /* Sources */,
+				F108985E2B175E100021B873 /* Frameworks */,
+				F108985F2B175E100021B873 /* Resources */,
+				2B3189C1321BE117ED2A76E1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoinKing;
+			productName = CoinKing;
+			productReference = F10898612B175E100021B873 /* CoinKing.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F10898592B175E100021B873 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					F10898602B175E100021B873 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = F108985C2B175E100021B873 /* Build configuration list for PBXProject "CoinKing" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F10898582B175E100021B873;
+			productRefGroup = F10898622B175E100021B873 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F10898602B175E100021B873 /* CoinKing */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F108985F2B175E100021B873 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F10898712B175E100021B873 /* LaunchScreen.storyboard in Resources */,
+				F108986E2B175E100021B873 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B3189C1321BE117ED2A76E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoinKing/Pods-CoinKing-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoinKing/Pods-CoinKing-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoinKing/Pods-CoinKing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77557A2146B640AD0316DB83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoinKing-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F108985D2B175E100021B873 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F10898692B175E100021B873 /* MarketViewController.swift in Sources */,
+				F10898812B1760EB0021B873 /* CALayer.swift in Sources */,
+				F10898652B175E100021B873 /* AppDelegate.swift in Sources */,
+				F108988B2B176BDD0021B873 /* MarketCell.swift in Sources */,
+				F10898862B1763B60021B873 /* ApiManager.swift in Sources */,
+				F10898672B175E100021B873 /* SceneDelegate.swift in Sources */,
+				F108988D2B1770060021B873 /* MarketViewModel.swift in Sources */,
+				F10898832B1760F00021B873 /* UIResponder.swift in Sources */,
+				F10898902B1782410021B873 /* PercentView.swift in Sources */,
+				F10898882B1764DF0021B873 /* Coin.swift in Sources */,
+				F10898922B1784B80021B873 /* Double.swift in Sources */,
+				F10898822B1760EE0021B873 /* UIColor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F108986F2B175E100021B873 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F10898702B175E100021B873 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F10898732B175E100021B873 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F10898742B175E100021B873 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F10898762B175E100021B873 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C916E62CE913BF163B106E57 /* Pods-CoinKing.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2WGLRC4Y2A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CoinKing/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeongyeon.CoinKing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F10898772B175E100021B873 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B186429E4553683CD81BCFEF /* Pods-CoinKing.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2WGLRC4Y2A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CoinKing/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeongyeon.CoinKing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F108985C2B175E100021B873 /* Build configuration list for PBXProject "CoinKing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F10898732B175E100021B873 /* Debug */,
+				F10898742B175E100021B873 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F10898752B175E100021B873 /* Build configuration list for PBXNativeTarget "CoinKing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F10898762B175E100021B873 /* Debug */,
+				F10898772B175E100021B873 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F10898592B175E100021B873 /* Project object */;
+}
