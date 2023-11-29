@@ -7,10 +7,17 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 class MarketCell: UITableViewCell {
     
     static let cellId = "MarketCell"
+    
+    // MARK: 코인 이미지
+    let coinImage: UIImageView = {
+        let view = UIImageView()
+        return view
+    }()
     
     // MARK: 코인명
     let coinNameLabel: UILabel = {
@@ -42,20 +49,27 @@ class MarketCell: UITableViewCell {
     // MARK: - UI Setup
     private func setupUI() {
         self.contentView.backgroundColor = ThemeColor.background
+        contentView.addSubview(coinImage)
         contentView.addSubview(coinNameLabel)
         contentView.addSubview(coinSymbolLabel)
         
         
-        // Add SnapKit constraints
+        coinImage.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.leading.equalToSuperview().offset(8)
+            make.height.width.equalTo(30)
+        }
+        
+        
         coinNameLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(8)
-            make.leading.equalToSuperview().offset(16)
+            make.top.equalToSuperview().offset(12)
+            make.leading.equalTo(coinImage.snp.trailing).offset(12)
         }
         
         coinSymbolLabel.snp.makeConstraints { make in
             make.top.equalTo(coinNameLabel.snp.bottom).offset(4)
-            make.leading.equalToSuperview().offset(16)
-            make.bottom.equalToSuperview().offset(-8)
+            make.leading.equalTo(coinImage.snp.trailing).offset(12)
+            make.bottom.equalToSuperview().offset(-12)
         }
         
         
@@ -67,5 +81,10 @@ class MarketCell: UITableViewCell {
         // Customize this method based on the properties of your MarketData model
         coinNameLabel.text = coin.name
         coinSymbolLabel.text = coin.symbol
+        
+        if let url = URL(string: coin.image) {
+            coinImage.kf.setImage(with: url)
+        }
+        
     }
 }
