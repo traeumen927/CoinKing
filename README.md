@@ -1,7 +1,7 @@
 # CoinKing
  Coin exchange app using coingecko API
 
-The target api used [https://newsapi.org/](https://www.coingecko.com/api/documentation)
+The target api used https://www.coingecko.com/api/documentation
 
 
 <p align="center">
