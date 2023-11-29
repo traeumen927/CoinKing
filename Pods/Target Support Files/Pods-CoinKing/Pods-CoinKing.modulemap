@@ -1,0 +1,6 @@
+framework module Pods_CoinKing {
+  umbrella header "Pods-CoinKing-umbrella.h"
+
+  export *
+  module * { export * }
+}

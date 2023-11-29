@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0BC10172BC2E4DBCFC5FDE2 /* Pods_CoinKing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC096DFABCDE28ED349DA88C /* Pods_CoinKing.framework */; };
 		F10898652B175E100021B873 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10898642B175E100021B873 /* AppDelegate.swift */; };
 		F10898672B175E100021B873 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10898662B175E100021B873 /* SceneDelegate.swift */; };
 		F10898692B175E100021B873 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10898682B175E100021B873 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B186429E4553683CD81BCFEF /* Pods-CoinKing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinKing.release.xcconfig"; path = "Target Support Files/Pods-CoinKing/Pods-CoinKing.release.xcconfig"; sourceTree = "<group>"; };
+		BC096DFABCDE28ED349DA88C /* Pods_CoinKing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinKing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C916E62CE913BF163B106E57 /* Pods-CoinKing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinKing.debug.xcconfig"; path = "Target Support Files/Pods-CoinKing/Pods-CoinKing.debug.xcconfig"; sourceTree = "<group>"; };
 		F10898612B175E100021B873 /* CoinKing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinKing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F10898642B175E100021B873 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F10898662B175E100021B873 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0BC10172BC2E4DBCFC5FDE2 /* Pods_CoinKing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1631C3375B066B43B05D1B2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C916E62CE913BF163B106E57 /* Pods-CoinKing.debug.xcconfig */,
+				B186429E4553683CD81BCFEF /* Pods-CoinKing.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A0EA3E4C666D13FDB1464DF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC096DFABCDE28ED349DA88C /* Pods_CoinKing.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F10898582B175E100021B873 = {
 			isa = PBXGroup;
 			children = (
 				F10898632B175E100021B873 /* CoinKing */,
 				F10898622B175E100021B873 /* Products */,
+				1631C3375B066B43B05D1B2F /* Pods */,
+				A0EA3E4C666D13FDB1464DF8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F10898752B175E100021B873 /* Build configuration list for PBXNativeTarget "CoinKing" */;
 			buildPhases = (
+				77557A2146B640AD0316DB83 /* [CP] Check Pods Manifest.lock */,
 				F108985D2B175E100021B873 /* Sources */,
 				F108985E2B175E100021B873 /* Frameworks */,
 				F108985F2B175E100021B873 /* Resources */,
+				700B3A671186B414D9EA9E30 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		700B3A671186B414D9EA9E30 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoinKing/Pods-CoinKing-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoinKing/Pods-CoinKing-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoinKing/Pods-CoinKing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77557A2146B640AD0316DB83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoinKing-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F108985D2B175E100021B873 /* Sources */ = {
@@ -287,6 +356,7 @@
 		};
 		F10898762B175E100021B873 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C916E62CE913BF163B106E57 /* Pods-CoinKing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -315,6 +385,7 @@
 		};
 		F10898772B175E100021B873 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B186429E4553683CD81BCFEF /* Pods-CoinKing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
