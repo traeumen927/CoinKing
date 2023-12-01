@@ -22,6 +22,7 @@
 		F108988D2B1770060021B873 /* MarketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F108988C2B1770060021B873 /* MarketViewModel.swift */; };
 		F10898902B1782410021B873 /* PercentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F108988F2B1782410021B873 /* PercentView.swift */; };
 		F10898922B1784B80021B873 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10898912B1784B80021B873 /* Double.swift */; };
+		F1F4F5592B19C53B00236DC2 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F4F5582B19C53B00236DC2 /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		F108988C2B1770060021B873 /* MarketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewModel.swift; sourceTree = "<group>"; };
 		F108988F2B1782410021B873 /* PercentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentView.swift; sourceTree = "<group>"; };
 		F10898912B1784B80021B873 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		F1F4F5582B19C53B00236DC2 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				F108987F2B1760E60021B873 /* UIColor.swift */,
 				F10898802B1760E60021B873 /* UIResponder.swift */,
 				F10898912B1784B80021B873 /* Double.swift */,
+				F1F4F5582B19C53B00236DC2 /* UIViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				F10898862B1763B60021B873 /* ApiManager.swift in Sources */,
 				F10898672B175E100021B873 /* SceneDelegate.swift in Sources */,
 				F108988D2B1770060021B873 /* MarketViewModel.swift in Sources */,
+				F1F4F5592B19C53B00236DC2 /* UIViewController.swift in Sources */,
 				F10898832B1760F00021B873 /* UIResponder.swift in Sources */,
 				F10898902B1782410021B873 /* PercentView.swift in Sources */,
 				F10898882B1764DF0021B873 /* Coin.swift in Sources */,

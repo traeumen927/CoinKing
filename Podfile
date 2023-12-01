@@ -12,5 +12,6 @@ target 'CoinKing' do
   pod 'RxCocoa'
   pod 'SnapKit'
   pod 'Kingfisher', '~> 7.0'
+  pod 'NVActivityIndicatorView'
 
 end
