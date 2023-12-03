@@ -8,12 +8,26 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SnapKit
+import Kingfisher
 
 class CoinViewController: UIViewController {
     
     let marketItem: Market
     var coinViewModel: CoinViewModel!
     private let disposeBag = DisposeBag()
+    
+    // MARK: 스크롤뷰
+    let scrollView: UIScrollView = {
+        let view = UIScrollView()
+        return view
+    }()
+    
+    // MARK: 심볼이미지
+    let symbolImageView: UIImageView = {
+        let view = UIImageView()
+        return view
+    }()
     
     init(item: Market) {
         self.marketItem = item
@@ -33,18 +47,11 @@ class CoinViewController: UIViewController {
         coinViewModel.fetchCoinDetails()
         
         
-        // ViewModel에서 Coin Details 데이터를 RxSwift로 처리
         coinViewModel.coinDetails
             .observe(on: MainScheduler.instance)
-            .subscribe(onNext: { result in
-                switch result {
-                case .success(let detailData):
-                    // 성공 시 처리
-                    print(detailData)
-                case .failure(let error):
-                    // 실패 시 처리
-                    print(error)
-                }
+            .subscribe(onNext: { coin in
+                // 성공 시 처리
+                self.bind(coin: coin)
             })
             .disposed(by: disposeBag)
         
@@ -61,5 +68,33 @@ class CoinViewController: UIViewController {
     private func layout() {
         self.title = self.marketItem.name
         self.view.backgroundColor = ThemeColor.background
+        
+        self.view.addSubview(scrollView)
+        
+        
+        scrollView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
+        let contentView = UIView()
+        scrollView.addSubview(contentView)
+        
+        
+        contentView.snp.makeConstraints { make in
+            make.edges.width.equalToSuperview()
+            make.height.equalToSuperview().priority(.low)
+        }
+        
+        contentView.addSubview(symbolImageView)
+        
+        symbolImageView.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(24)
+            make.leading.equalToSuperview().offset(24)
+            make.height.width.equalTo(48)
+        }
+    }
+    
+    private func bind(coin: Coin) {
+        
     }
 }
