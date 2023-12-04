@@ -118,6 +118,6 @@ class MarketCell: UITableViewCell {
         percentView.setPercentage(market.price_change_percentage_24h)
         
         // MARK: Coin current price
-        priceLabel.text = "$\(market.current_price.roundedString(toDecimalPlaces: 5))"
+        priceLabel.text = "$\(market.current_price.formattedStringWithCommaAndDecimal(places: 5))"
     }
 }

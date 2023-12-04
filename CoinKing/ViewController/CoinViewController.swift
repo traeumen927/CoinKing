@@ -63,6 +63,7 @@ class CoinViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.showLoadingIndicator()
         layout()
         
         coinViewModel.fetchCoinDetails()
@@ -73,6 +74,7 @@ class CoinViewController: UIViewController {
             .subscribe(onNext: { coin in
                 // 성공 시 처리
                 debugPrint(coin)
+                self.hideLoadingIndicator()
                 self.bind(coin: coin)
             })
             .disposed(by: disposeBag)
@@ -83,6 +85,7 @@ class CoinViewController: UIViewController {
             .subscribe(onNext: { error in
                 // 실패 시 처리
                 print(error)
+                self.hideLoadingIndicator()
             })
             .disposed(by: disposeBag)
     }
@@ -112,7 +115,8 @@ class CoinViewController: UIViewController {
         
         self.view.addSubview(scrollView)
         scrollView.snp.makeConstraints { make in
-            make.top.leading.trailing.equalToSuperview()
+            make.top.equalTo(self.view.safeAreaLayoutGuide)
+            make.leading.trailing.equalToSuperview()
             make.bottom.equalTo(orderView.snp.top)
         }
         
@@ -120,6 +124,9 @@ class CoinViewController: UIViewController {
         stackView.snp.makeConstraints { make in
             make.edges.width.equalToSuperview()
         }
+        
+//        stackView.addArrangedSubview(priceView)
+//        stackView.addArrangedSubview(descriptionView)
     }
     
     private func bind(coin: Coin) {
@@ -127,6 +134,9 @@ class CoinViewController: UIViewController {
         stackView.addArrangedSubview(priceView)
         stackView.addArrangedSubview(descriptionView)
         
+        
+        priceView.configure(with: coin)
         descriptionView.configure(with: coin)
+        
     }
 }

@@ -26,6 +26,8 @@
 		F1D5B8E92B1DB2EE00791C4A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D5B8E82B1DB2EE00791C4A /* UIView.swift */; };
 		F1D5B8EB2B1DBD6B00791C4A /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D5B8EA2B1DBD6B00791C4A /* PriceView.swift */; };
 		F1D5B8ED2B1DC5F500791C4A /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D5B8EC2B1DC5F500791C4A /* DescriptionView.swift */; };
+		F1D5B8EF2B1E0DD600791C4A /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D5B8EE2B1E0DD600791C4A /* UILabel.swift */; };
+		F1D5B8F12B1E1A9500791C4A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D5B8F02B1E1A9500791C4A /* String.swift */; };
 		F1F4F5592B19C53B00236DC2 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F4F5582B19C53B00236DC2 /* UIViewController.swift */; };
 		F1F4F55B2B19CA2600236DC2 /* CoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F4F55A2B19CA2600236DC2 /* CoinViewController.swift */; };
 		F1F4F55D2B19CA4B00236DC2 /* CoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F4F55C2B19CA4B00236DC2 /* CoinViewModel.swift */; };
@@ -55,6 +57,8 @@
 		F1D5B8E82B1DB2EE00791C4A /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		F1D5B8EA2B1DBD6B00791C4A /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 		F1D5B8EC2B1DC5F500791C4A /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		F1D5B8EE2B1E0DD600791C4A /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		F1D5B8F02B1E1A9500791C4A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		F1F4F5582B19C53B00236DC2 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		F1F4F55A2B19CA2600236DC2 /* CoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewController.swift; sourceTree = "<group>"; };
 		F1F4F55C2B19CA4B00236DC2 /* CoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewModel.swift; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 				F10898912B1784B80021B873 /* Double.swift */,
 				F1F4F5582B19C53B00236DC2 /* UIViewController.swift */,
 				F1D5B8E82B1DB2EE00791C4A /* UIView.swift */,
+				F1D5B8EE2B1E0DD600791C4A /* UILabel.swift */,
+				F1D5B8F02B1E1A9500791C4A /* String.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -324,6 +330,7 @@
 				F1D5B8ED2B1DC5F500791C4A /* DescriptionView.swift in Sources */,
 				F108988D2B1770060021B873 /* MarketViewModel.swift in Sources */,
 				F1F4F5592B19C53B00236DC2 /* UIViewController.swift in Sources */,
+				F1D5B8EF2B1E0DD600791C4A /* UILabel.swift in Sources */,
 				F10898832B1760F00021B873 /* UIResponder.swift in Sources */,
 				F10898902B1782410021B873 /* PercentView.swift in Sources */,
 				F10898882B1764DF0021B873 /* Market.swift in Sources */,
@@ -331,6 +338,7 @@
 				F1D5B8E92B1DB2EE00791C4A /* UIView.swift in Sources */,
 				F1D5B8EB2B1DBD6B00791C4A /* PriceView.swift in Sources */,
 				F10898922B1784B80021B873 /* Double.swift in Sources */,
+				F1D5B8F12B1E1A9500791C4A /* String.swift in Sources */,
 				F15435682B1A0A8400308FB7 /* Coin.swift in Sources */,
 				F10898822B1760EE0021B873 /* UIColor.swift in Sources */,
 			);

@@ -59,31 +59,38 @@ struct Images: Decodable {
 
 struct Market_Data: Decodable {
     //현재가
-    let current_price: CountryDouble
+    let current_price: CountryType
     //시가총액
-    let market_cap: CountryInt
+    let market_cap: CountryType
     //24시간 최고가
-    let high_24h: CountryDouble
+    let high_24h: CountryType
     //24시간 최저가
-    let low_24h: CountryDouble
+    let low_24h: CountryType
+    //거래량
+    let total_volume:CoinType
     //총 발행한도
     let total_supply: Double
     //현재 유통량
     let circulating_supply: Double
+    //증감액
+    let price_change_24h: Double
+    //증감율
+    let price_change_percentage_24h: Double
     
     //마지막 업데이트(yyyy-MM-ddTHH:mm:ss.sssZ)
     let last_updated: String
 }
 
-struct CountryDouble: Decodable {
+struct CountryType: Decodable {
     let usd: Double
     let krw: Double
 }
 
-struct CountryInt: Decodable {
-    let usd: Double
-    let krw: Double
+struct CoinType: Decodable {
+    let btc: Double
+    let eth: Double
 }
+
 
 struct Price: Decodable {
     let price: [Double]
