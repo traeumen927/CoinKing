@@ -17,17 +17,38 @@ class CoinViewController: UIViewController {
     var coinViewModel: CoinViewModel!
     private let disposeBag = DisposeBag()
     
-    // MARK: 스크롤뷰
+    // 스크롤뷰
     let scrollView: UIScrollView = {
-        let view = UIScrollView()
+        let view  = UIScrollView()
         return view
     }()
     
-    // MARK: 심볼이미지
-    let symbolImageView: UIImageView = {
-        let view = UIImageView()
+    // 스택뷰
+    let stackView: UIStackView = {
+        let view = UIStackView()
+        view.axis = .vertical
+        view.spacing = 0
         return view
     }()
+    
+    // MARK: priceView(스택뷰 하위뷰)
+    let priceView = PriceView()
+    
+    // MARK: descriptionView(스택뷰 하위뷰)
+    let descriptionView = DescriptionView()
+    
+    // MARK: 주문버튼
+    let btnOrder: UIButton = {
+        let button = UIButton()
+        button.setTitle("주문하기", for: .normal)
+        button.setTitleColor(ThemeColor.tint1, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        button.backgroundColor = ThemeColor.primary2
+        button.layer.cornerRadius = 24
+        return button
+    }()
+    
+    
     
     init(item: Market) {
         self.marketItem = item
@@ -51,6 +72,7 @@ class CoinViewController: UIViewController {
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { coin in
                 // 성공 시 처리
+                debugPrint(coin)
                 self.bind(coin: coin)
             })
             .disposed(by: disposeBag)
@@ -69,32 +91,42 @@ class CoinViewController: UIViewController {
         self.title = self.marketItem.name
         self.view.backgroundColor = ThemeColor.background
         
+        let orderView = UIView()
+        orderView.backgroundColor = ThemeColor.primary1
+        
+        self.view.addSubview(orderView)
+        
+        orderView.snp.makeConstraints { make in
+            make.leading.trailing.bottom.equalToSuperview()
+        }
+        
+        orderView.addSubview(btnOrder)
+        
+        btnOrder.snp.makeConstraints { make in
+            make.top.equalTo(orderView.snp.top).offset(12)
+            make.leading.equalTo(orderView.snp.leading).offset(12)
+            make.trailing.equalTo(orderView.snp.trailing).offset(-12)
+            make.bottom.equalTo(orderView.safeAreaLayoutGuide.snp.bottom).offset(-12)
+            make.height.equalTo(48)
+        }
+        
         self.view.addSubview(scrollView)
-        
-        
         scrollView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.leading.trailing.equalToSuperview()
+            make.bottom.equalTo(orderView.snp.top)
         }
         
-        let contentView = UIView()
-        scrollView.addSubview(contentView)
-        
-        
-        contentView.snp.makeConstraints { make in
+        scrollView.addSubview(stackView)
+        stackView.snp.makeConstraints { make in
             make.edges.width.equalToSuperview()
-            make.height.equalToSuperview().priority(.low)
-        }
-        
-        contentView.addSubview(symbolImageView)
-        
-        symbolImageView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(24)
-            make.leading.equalToSuperview().offset(24)
-            make.height.width.equalTo(48)
         }
     }
     
     private func bind(coin: Coin) {
         
+        stackView.addArrangedSubview(priceView)
+        stackView.addArrangedSubview(descriptionView)
+        
+        descriptionView.configure(with: coin)
     }
 }

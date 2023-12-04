@@ -29,6 +29,7 @@ extension UIColor {
 
 struct ThemeColor {
     static let primary1 = UIColor(hexString: "1c2541")
+    static let primary2 = UIColor(hexString: "1b3b6f")
     static let tint1 = UIColor(hexString: "f8f9fa")
     static let tint2 = UIColor(hexString: "ced4da")
     static let background = UIColor(hexString: "0b132b")

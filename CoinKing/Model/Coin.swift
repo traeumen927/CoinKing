@@ -23,8 +23,11 @@ struct Coin: Decodable {
     //관련 링크
     let links: Links
     
+    //이미지
+    let image: Images
+    
     //최초발행일
-    let genesis_date: String
+    let genesis_date: String?
     
     //오를거라 투표한 인원(%)
     let sentiment_votes_up_percentage: Double
@@ -48,6 +51,12 @@ struct Links: Decodable {
     let blockchain_site: [String]
 }
 
+struct Images: Decodable {
+    let thumb: String
+    let small: String
+    let large: String
+}
+
 struct Market_Data: Decodable {
     //현재가
     let current_price: CountryDouble
@@ -58,9 +67,9 @@ struct Market_Data: Decodable {
     //24시간 최저가
     let low_24h: CountryDouble
     //총 발행한도
-    let total_supply: Int
+    let total_supply: Double
     //현재 유통량
-    let circulating_supply: Int
+    let circulating_supply: Double
     
     //마지막 업데이트(yyyy-MM-ddTHH:mm:ss.sssZ)
     let last_updated: String
