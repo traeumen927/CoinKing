@@ -101,23 +101,23 @@ class MarketCell: UITableViewCell {
     }
     
     // MARK: - Configure Cell
-    func configure(with coin: Coin) {
+    func configure(with market: Market) {
         
         // MARK: Coin Image
-        if let url = URL(string: coin.image) {
+        if let url = URL(string: market.image) {
             coinImage.kf.setImage(with: url)
         }
         
         // MARK: Coin name
-        coinNameLabel.text = coin.name
+        coinNameLabel.text = market.name
         
         // MARK: Coin symbol
-        coinSymbolLabel.text = coin.symbol
+        coinSymbolLabel.text = market.symbol
         
         // MARK: Coin 24 percent
-        percentView.setPercentage(coin.price_change_percentage_24h)
+        percentView.setPercentage(market.price_change_percentage_24h)
         
         // MARK: Coin current price
-        priceLabel.text = "$\(coin.current_price.roundedString(toDecimalPlaces: 5))"
+        priceLabel.text = "$\(market.current_price.formattedStringWithCommaAndDecimal(places: 5))"
     }
 }

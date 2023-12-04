@@ -16,7 +16,7 @@ class MarketViewController: UIViewController {
     private let viewModel = MarketViewModel()
     
     // MARK: 코인리스트
-    private var coins = [Coin]()
+    private var coins = [Market]()
     
     // MARK: 코인 시세 테이블뷰
     private lazy var tableView: UITableView = {
@@ -76,5 +76,11 @@ extension MarketViewController: UITableViewDataSource, UITableViewDelegate {
         cell.configure(with: coinData)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let navi = self.navigationController else {return}
+        navi.pushViewController(CoinViewController(item: coins[indexPath.row]), animated: true)
     }
 }
